@@ -41,17 +41,25 @@ touch .env
 Пример содержимого файла .env:
 
 POSTGRES_USER=test
+
 POSTGRES_PASSWORD=password
+
 POSTGRES_DB='test'
+
 POSTGRES_PORT=5432
+
 POSTGRES_HOST=localhost
 
 REDIS_URL=redis://redis:6379/0
+
 REDIS_PORT=6379
+
 FASTAPI_CACHE_LIFETIME=60
 
 SECRET_KEY='your_secret_key'
+
 ALGORITHM ='HS256'
+
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 5. (Опционально) Если вы хотите использовать Docker, выполните команду:
