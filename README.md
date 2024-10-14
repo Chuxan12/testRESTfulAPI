@@ -28,56 +28,47 @@
 
 2. Создайте и активируйте виртуальное окружение:
 
-python -m venv venv
-source venv/bin/activate  # Для Windows используйте `venv\Scripts\activate`
+   ```bash
+   python -m venv venv<br />
+   source venv/bin/activate  # Для Windows используйте `venv\Scripts\activate`
 
 3. Установите зависимости:
-
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 4. Настройте файл .env для хранения конфигурационных параметров (например, строки подключения к базе данных):
 
-touch .env
-Пример содержимого файла .env:
-
-POSTGRES_USER=test
-
-POSTGRES_PASSWORD=password
-
-POSTGRES_DB='test'
-
-POSTGRES_PORT=5432
-
-POSTGRES_HOST=localhost
-
-REDIS_URL=redis://redis:6379/0
-
-REDIS_PORT=6379
-
-FASTAPI_CACHE_LIFETIME=60
-
-SECRET_KEY='your_secret_key'
-
-ALGORITHM ='HS256'
-
-ACCESS_TOKEN_EXPIRE_MINUTES=30
+touch .env<br />
+Пример содержимого файла .env:<br />
+POSTGRES_USER=test<br />
+POSTGRES_PASSWORD=password<br />
+POSTGRES_DB='test'<br />
+POSTGRES_PORT=5432<br />
+POSTGRES_HOST=localhost<br />
+REDIS_URL=redis://redis:6379/0<br />
+REDIS_PORT=6379<br />
+FASTAPI_CACHE_LIFETIME=60<br />
+SECRET_KEY='your_secret_key'<br />
+ALGORITHM ='HS256'<br />
+ACCESS_TOKEN_EXPIRE_MINUTES=30<br />
 
 5. (Опционально) Если вы хотите использовать Docker, выполните команду:
 
 docker-compose up -d
 ## Запуск проекта
 Для запуска проекта выполните:
-
-uvicorn app.api.main:app --host 0.0.0.0 --port 8000 --reload
-Теперь API будет доступен по адресу http://127.0.0.1:8000.
+   ```bash
+   uvicorn app.api.main:app --host 0.0.0.0 --port 8000 --reload
+   ```
+   Теперь API будет доступен по адресу http://127.0.0.1:8000.
 
 ## Использование
 API предоставляет следующие эндпоинты:
 
-POST /auth/register: Регистрация нового пользователя
-POST /auth/login: Авторизация пользователя
-POST /auth/logout: Разлогинивание пользователя
-POST /tasks: Создание новой записи
-GET /tasks: Получение списка всех записей текущего пользователя
-GET /tasks/{task_id}: Получение конкретной записи
+POST /auth/register: Регистрация нового пользователя<br />
+POST /auth/login: Авторизация пользователя<br />
+POST /auth/logout: Разлогинивание пользователя<br />
+POST /tasks: Создание новой записи<br />
+GET /tasks: Получение списка всех записей текущего пользователя<br />
+GET /tasks/{task_id}: Получение конкретной записи<br />
 Для более подробной информации о каждом эндпоинте вы можете обратиться к автоматически сгенерированной документации FastAPI по адресу http://127.0.0.1:8000/docs.
