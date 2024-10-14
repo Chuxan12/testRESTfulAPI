@@ -30,9 +30,11 @@
 
 python -m venv venv
 source venv/bin/activate  # Для Windows используйте `venv\Scripts\activate`
+
 3. Установите зависимости:
 
 pip install -r requirements.txt
+
 4. Настройте файл .env для хранения конфигурационных параметров (например, строки подключения к базе данных):
 
 touch .env
@@ -51,6 +53,7 @@ FASTAPI_CACHE_LIFETIME=60
 SECRET_KEY='your_secret_key'
 ALGORITHM ='HS256'
 ACCESS_TOKEN_EXPIRE_MINUTES=30
+
 5. (Опционально) Если вы хотите использовать Docker, выполните команду:
 
 docker-compose up -d
