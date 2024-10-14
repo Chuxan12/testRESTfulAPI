@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+redis
+python-jose
+slowapi
+alembic
+pydantic
+pydantic[email]
+psycopg2 
+passlib
+pydantic_settings
+httpx
