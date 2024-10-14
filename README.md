@@ -38,19 +38,20 @@
 
 4. Настройте файл .env для хранения конфигурационных параметров (например, строки подключения к базе данных):
 
-touch .env<br />
-Пример содержимого файла .env:<br />
-POSTGRES_USER=test<br />
-POSTGRES_PASSWORD=password<br />
-POSTGRES_DB='test'<br />
-POSTGRES_PORT=5432<br />
-POSTGRES_HOST=localhost<br />
-REDIS_URL=redis://redis:6379/0<br />
-REDIS_PORT=6379<br />
-FASTAPI_CACHE_LIFETIME=60<br />
-SECRET_KEY='your_secret_key'<br />
-ALGORITHM ='HS256'<br />
-ACCESS_TOKEN_EXPIRE_MINUTES=30<br />
+Пример содержимого файла .env:
+```bash
+POSTGRES_USER=test
+POSTGRES_PASSWORD=password
+POSTGRES_DB='test'
+POSTGRES_PORT=5432
+POSTGRES_HOST=localhost
+REDIS_URL=redis://redis:6379/0
+REDIS_PORT=6379
+FASTAPI_CACHE_LIFETIME=60
+SECRET_KEY='your_secret_key'
+ALGORITHM ='HS256'
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
 
 5. (Опционально) Если вы хотите использовать Docker, выполните команду:
 
